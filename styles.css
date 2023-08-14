@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.speedometer {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    border: 10px solid #333;
+    border-top: none;
+    border-radius: 50% 50% 0 0;
+    overflow: hidden;
+}
+
+.dial {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    transform: rotate(45deg);
+}
+
+.pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 40%;
+    background-color: red;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.inner-color1 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: green;
+    left: 0;
+    top: 0;
+    transform-origin: right center;
+    transform: rotate(0deg);
+    clip-path: polygon(100% 0, 100% 50%, 0% 50%, 0% 0);
+}
+
+.inner-color2 {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: yellow;
+    left: 50%;
+    top: 0;
+    transform-origin: left center;
+    transform: rotate(0deg);
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
